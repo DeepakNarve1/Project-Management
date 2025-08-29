@@ -243,7 +243,7 @@ const resetPasswordRequest = async (req, res) => {
       expireAt: new Date(Date.now() + 15 * 60 * 1000),
     });
 
-    const resetPasswordLink = `${process.env.FRONTEND_URL}/reset-password?token=${resetPasswordToken}`;
+    const resetPasswordLink = `${process.env.CLIENT_URL}/reset-password?token=${resetPasswordToken}`;
     const emailBody = `<p>Click <a href="${resetPasswordLink}">here</a> to reset your password</p>`;
     const emailSubject = "Reset your password";
 
