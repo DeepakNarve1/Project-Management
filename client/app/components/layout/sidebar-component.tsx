@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { Button } from "../ui/button";
 import { ScrollArea } from "../ui/scroll-area";
+import { SidebarNav } from "./sidebar-nav";
 
 export const SidebarComponent = ({
   currentWorkspace,
@@ -95,7 +96,7 @@ export const SidebarComponent = ({
         <SidebarNav
           items={navItems}
           isCollapsed={isCollapsed}
-          classname={isCollapsed && "items-center space-y-2"}
+          className={cn(isCollapsed && "items-center space-y-2")}
           currentWorkspace={currentWorkspace}
         />
       </ScrollArea>
